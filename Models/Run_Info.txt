@@ -1,0 +1,5 @@
+Attempt_1 = 100k data points [20,128], [128, 128], [128,1] loss .057
+Attept_2 = 500k data points [20,128], [128, 128], [128,1] loss .043
+Attempt_3 = 500k data points [20, 256], [256, 256], [256, 128], [128, 1] loss .041
+
+Crib_Attempt_1 = 100k data points [10, 256], [256, 256], [256, 128], [128, 1] loss .073

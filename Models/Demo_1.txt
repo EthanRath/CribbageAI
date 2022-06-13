@@ -1,0 +1,199 @@
+A of spade, 4 of clover, 5 of clover, 6 of spade, 8 of clover, King of clover | Choice: 4 of clover, 5 of clover, 6 of spade, King of clover |
+
+2 of clover, 4 of spade, 5 of spade, 7 of heart, 9 of spade, 10 of clover | Choice: 4 of spade, 5 of spade, 9 of spade, 10 of clover |
+
+6 of spade, 6 of heart, 7 of heart, 9 of clover, 10 of diamond, Queen of heart | Choice: 6 of spade, 6 of heart, 9 of clover, 10 of diamond,
+
+A of diamond, 3 of heart, 3 of clover, 8 of clover, Jack of clover, Jack of heart | Choice: 3 of heart, 3 of clover, Jack of clover, Jack of heart |
+
+A of heart, 5 of clover, 6 of diamond, Jack of heart, Queen of spade, Queen of clover | Choice: 5 of clover, Jack of heart, Queen of spade, Queen of clover |
+
+4 of clover, 6 of clover, 10 of spade, Jack of spade, King of clover, King of diamond | Choice: 10 of spade, Jack of spade, King of clover, King of diamond |
+
+3 of heart, 4 of spade, 5 of heart, 9 of spade, King of diamond, King of heart | Choice: 3 of heart, 5 of heart, King of diamond, King of heart |
+
+2 of clover, 6 of clover, 8 of spade, 8 of heart, Jack of heart, Queen of clover | Choice: 6 of clover, 8 of spade, 8 of heart, Jack of heart,
+
+2 of spade, 3 of clover, 9 of spade, Jack of clover, Queen of spade, King of clover | Choice: 3 of clover, Jack of clover, Queen of spade, King of clover |
+
+3 of heart, 5 of heart, 8 of heart, 9 of clover, 10 of diamond, King of heart | Choice: 5 of heart, 8 of heart, 9 of clover, 10 of diamond,
+
+5 of spade, 7 of spade, Jack of clover, Jack of diamond, Jack of spade, Queen of heart | Choice: 5 of spade, Jack of clover, Jack of diamond, Jack of spade,
+
+4 of heart, 5 of clover, 5 of heart, 5 of diamond, 8 of clover, 9 of spade | Choice: 4 of heart, 5 of clover, 5 of heart, 5 of diamond,
+
+A of spade, 5 of spade, 9 of spade, 9 of heart, 10 of spade, 10 of clover | Choice: A of spade, 5 of spade, 9 of spade, 10 of spade,
+
+3 of spade, 5 of heart, 10 of heart, Jack of diamond, Jack of heart, Queen of diamond | Choice: 5 of heart, 10 of heart, Jack of heart, Queen of diamond |
+
+A of clover, A of diamond, 2 of diamond, 4 of spade, 5 of spade, King of spade | Choice: A of clover, 4 of spade, 5 of spade, King of spade |
+
+A of spade, 3 of heart, 4 of diamond, 6 of diamond, King of clover, King of diamond | Choice: A of spade, 4 of diamond, King of clover, King of diamond |
+
+3 of heart, 4 of diamond, 6 of heart, 10 of spade, 10 of clover, King of diamond | Choice: 4 of diamond, 6 of heart, 10 of spade, 10 of clover,
+
+2 of diamond, 2 of spade, 2 of clover, 7 of clover, 8 of diamond, King of heart | Choice: 2 of diamond, 2 of spade, 2 of clover, 8 of diamond,
+
+2 of heart, 8 of clover, 9 of spade, 10 of clover, 10 of diamond, Jack of diamond | Choice: 8 of clover, 9 of spade, 10 of clover, 10 of diamond,
+
+A of heart, 2 of spade, 4 of diamond, 5 of clover, 7 of heart, 9 of diamond | Choice: A of heart, 2 of spade, 4 of diamond, 9 of diamond |
+
+2 of diamond, 4 of heart, 5 of diamond, 6 of diamond, 7 of diamond, 9 of diamond | Choice: 2 of diamond, 5 of diamond, 6 of diamond, 7 of diamond,
+
+4 of diamond, 6 of spade, 7 of heart, 8 of spade, 10 of heart, Jack of heart | Choice: 6 of spade, 7 of heart, 8 of spade, 10 of heart,
+
+2 of heart, 4 of diamond, 5 of heart, 8 of spade, 10 of spade, 10 of clover | Choice: 4 of diamond, 5 of heart, 10 of spade, 10 of clover |
+
+A of diamond, 3 of spade, 6 of diamond, Jack of heart, Jack of diamond, Queen of heart | Choice: 3 of spade, Jack of heart, Jack of diamond, Queen of heart |
+
+2 of spade, 3 of diamond, 8 of spade, Jack of diamond, King of clover, King of diamond | Choice: 2 of spade, 3 of diamond, King of clover, King of diamond |
+
+A of clover, A of spade, 2 of diamond, 3 of spade, 9 of diamond, King of heart | Choice: A of clover, A of spade, 2 of diamond, 3 of spade,
+
+A of spade, 2 of clover, 3 of spade, 7 of heart, 9 of spade, 10 of diamond | Choice: A of spade, 2 of clover, 3 of spade, 9 of spade,
+
+2 of spade, 5 of diamond, 6 of diamond, 6 of spade, Jack of diamond, King of spade | Choice: 5 of diamond, 6 of diamond, 6 of spade, Jack of diamond,
+
+A of diamond, 5 of heart, 7 of diamond, 7 of clover, 8 of heart, Queen of diamond | Choice: A of diamond, 7 of diamond, 7 of clover, 8 of heart,
+
+3 of heart, 3 of clover, 5 of diamond, 9 of diamond, King of heart, King of clover | Choice: 5 of diamond, 9 of diamond, King of heart, King of clover |
+
+A of diamond, 2 of heart, 4 of clover, 10 of spade, Jack of spade, King of heart | Choice: A of diamond, 4 of clover, 10 of spade, Jack of spade,
+
+A of spade, 6 of heart, 6 of diamond, 9 of heart, 10 of diamond, King of clover | Choice: 6 of heart, 6 of diamond, 9 of heart, 10 of diamond,
+
+A of diamond, 3 of spade, 5 of heart, 8 of heart, 9 of heart, Queen of clover | Choice: A of diamond, 5 of heart, 9 of heart, Queen of clover |
+
+A of heart, 4 of clover, 6 of heart, 6 of spade, 7 of spade, Jack of spade | Choice: 6 of heart, 6 of spade, 7 of spade, Jack of spade |
+
+2 of clover, 3 of heart, 4 of heart, 7 of clover, 8 of diamond, Queen of heart | Choice: 2 of clover, 3 of heart, 4 of heart, Queen of heart |
+
+2 of diamond, 4 of diamond, 8 of heart, 9 of heart, 9 of clover, King of spade | Choice: 2 of diamond, 4 of diamond, 9 of heart, 9 of clover,
+
+2 of clover, 4 of clover, 4 of spade, 6 of diamond, Jack of clover, Jack of spade | Choice: 4 of clover, 4 of spade, Jack of clover, Jack of spade |
+
+A of spade, 2 of spade, 5 of spade, 7 of diamond, 10 of spade, Jack of diamond | Choice: A of spade, 2 of spade, 5 of spade, 10 of spade,
+
+3 of spade, 4 of diamond, 5 of heart, 5 of clover, 8 of diamond, 10 of clover | Choice: 3 of spade, 4 of diamond, 5 of heart, 5 of clover,
+
+6 of clover, 7 of heart, 8 of heart, 9 of diamond, 9 of spade, King of clover | Choice: 7 of heart, 8 of heart, 9 of diamond, 9 of spade,
+
+A of diamond, A of clover, 5 of heart, 7 of clover, 8 of diamond, King of spade | Choice: 5 of heart, 7 of clover, 8 of diamond, King of spade |
+
+3 of heart, 3 of clover, 4 of spade, 7 of heart, Queen of diamond, King of heart | Choice: 3 of heart, 3 of clover, 4 of spade, 7 of heart,
+
+A of clover, 3 of spade, 7 of spade, 9 of diamond, Queen of heart, King of heart | Choice: 3 of spade, 7 of spade, 9 of diamond, Queen of heart,
+
+2 of clover, 4 of heart, 7 of clover, 9 of spade, Queen of spade, Queen of diamond | Choice: 2 of clover, 4 of heart, 7 of clover, 9 of spade,
+
+4 of diamond, 5 of spade, 5 of clover, 8 of diamond, Queen of heart, King of clover | Choice: 5 of spade, 5 of clover, Queen of heart, King of clover |
+
+2 of spade, 5 of diamond, 6 of diamond, 8 of heart, 10 of heart, Queen of diamond | Choice: 5 of diamond, 6 of diamond, 10 of heart, Queen of diamond |
+
+5 of spade, 9 of spade, 10 of spade, Queen of clover, King of heart, King of clover | Choice: 5 of spade, Queen of clover, King of heart, King of clover |
+
+4 of heart, 5 of heart, 6 of spade, 7 of diamond, Queen of spade, King of spade | Choice: 4 of heart, 5 of heart, 6 of spade, King of spade |
+
+3 of clover, 8 of diamond, Jack of clover, Queen of heart, King of spade, King of clover | Choice: Jack of clover, Queen of heart, King of spade, King of clover |
+
+4 of heart, 6 of spade, 7 of clover, 8 of clover, 9 of diamond, Jack of heart | Choice: 6 of spade, 7 of clover, 8 of clover, 9 of diamond,
+
+2 of diamond, 6 of heart, 7 of diamond, 7 of clover, Jack of clover, Queen of spade | Choice: 2 of diamond, 6 of heart, 7 of diamond, 7 of clover,
+
+3 of spade, 4 of heart, 5 of spade, 6 of clover, Jack of spade, Queen of heart | Choice: 4 of heart, 5 of spade, 6 of clover, Queen of heart |
+
+A of diamond, 2 of clover, 10 of spade, Jack of clover, Queen of diamond, King of heart | Choice: 10 of spade, Jack of clover, Queen of diamond, King of heart |
+
+A of spade, 2 of diamond, 6 of diamond, 7 of spade, 8 of spade, 9 of diamond | Choice: 6 of diamond, 7 of spade, 8 of spade, 9 of diamond |
+
+A of clover, 7 of heart, 8 of spade, 8 of heart, Queen of diamond, King of clover | Choice: A of clover, 7 of heart, 8 of spade, 8 of heart,
+
+2 of spade, 3 of heart, 7 of spade, 7 of diamond, 9 of diamond, 10 of heart | Choice: 7 of spade, 7 of diamond, 9 of diamond, 10 of heart |
+
+4 of diamond, 5 of diamond, 6 of heart, 7 of spade, Jack of diamond, Jack of heart | Choice: 4 of diamond, 5 of diamond, 6 of heart, Jack of diamond,
+
+3 of clover, 3 of diamond, 8 of spade, 8 of diamond, 10 of spade, Jack of spade | Choice: 3 of clover, 3 of diamond, 8 of spade, 8 of diamond,
+
+2 of clover, 2 of heart, 4 of clover, 4 of spade, 5 of clover, Jack of heart | Choice: 2 of clover, 4 of clover, 4 of spade, 5 of clover,
+
+2 of spade, 3 of heart, 6 of clover, 7 of clover, 8 of spade, Queen of clover | Choice: 6 of clover, 7 of clover, 8 of spade, Queen of clover |
+
+3 of spade, 3 of heart, 4 of spade, 4 of clover, 9 of diamond, King of spade | Choice: 3 of spade, 3 of heart, 4 of spade, 4 of clover,
+
+A of clover, A of diamond, 7 of diamond, 8 of clover, Queen of clover, King of clover | Choice: A of clover, 8 of clover, Queen of clover, King of clover |
+
+A of diamond, 3 of spade, 3 of diamond, 5 of heart, 5 of clover, King of diamond | Choice: A of diamond, 5 of heart, 5 of clover, King of diamond |
+
+5 of spade, 6 of diamond, 7 of diamond, 10 of spade, Jack of clover, Queen of spade | Choice: 5 of spade, 10 of spade, Jack of clover, Queen of spade |
+
+A of diamond, 7 of heart, 10 of clover, Jack of clover, Queen of spade, King of clover | Choice: 10 of clover, Jack of clover, Queen of spade, King of clover |
+
+3 of heart, 4 of spade, 6 of clover, 8 of clover, 9 of spade, Jack of spade | Choice: 6 of clover, 8 of clover, 9 of spade, Jack of spade |
+
+3 of diamond, 6 of spade, 6 of heart, 8 of diamond, Jack of diamond, King of heart | Choice: 3 of diamond, 6 of spade, 6 of heart, 8 of diamond,
+
+A of clover, 3 of spade, 8 of spade, 9 of spade, Jack of spade, King of diamond | Choice: 3 of spade, 8 of spade, 9 of spade, Jack of spade,
+
+2 of spade, 5 of clover, 7 of heart, 8 of spade, Jack of clover, King of diamond | Choice: 2 of spade, 5 of clover, Jack of clover, King of diamond |
+
+A of spade, 7 of clover, 9 of heart, 10 of spade, Jack of heart, Queen of spade | Choice: A of spade, 10 of spade, Jack of heart, Queen of spade |
+
+A of diamond, 4 of clover, 6 of heart, Queen of clover, Queen of spade, King of spade | Choice: A of diamond, 4 of clover, Queen of clover, Queen of spade,
+
+4 of diamond, 5 of heart, 7 of heart, 8 of spade, 10 of heart, Jack of clover | Choice: 4 of diamond, 5 of heart, 10 of heart, Jack of clover |
+
+A of clover, 6 of clover, 9 of spade, 10 of clover, King of clover, King of spade | Choice: A of clover, 6 of clover, 10 of clover, King of clover,
+
+2 of diamond, 3 of clover, 4 of heart, 7 of clover, Jack of spade, Queen of diamond | Choice: 2 of diamond, 3 of clover, 4 of heart, Jack of spade,
+
+3 of clover, 5 of clover, 7 of clover, 8 of spade, 10 of clover, King of clover | Choice: 3 of clover, 5 of clover, 10 of clover, King of clover |
+
+A of spade, 2 of diamond, 4 of clover, 4 of diamond, 8 of clover, Jack of clover | Choice: A of spade, 4 of clover, 4 of diamond, Jack of clover |
+
+A of clover, 3 of clover, 5 of clover, 6 of clover, 9 of spade, Queen of heart | Choice: A of clover, 3 of clover, 5 of clover, 6 of clover,
+
+4 of diamond, 4 of heart, 7 of heart, 9 of diamond, 10 of clover, 10 of diamond | Choice: 4 of diamond, 4 of heart, 7 of heart, 9 of diamond,
+
+A of heart, 3 of heart, 6 of spade, 8 of heart, 9 of diamond, Queen of clover | Choice: A of heart, 6 of spade, 8 of heart, 9 of diamond,
+
+2 of diamond, 2 of heart, 5 of clover, 6 of heart, 7 of diamond, King of diamond | Choice: 5 of clover, 6 of heart, 7 of diamond, King of diamond |
+
+2 of clover, 2 of heart, 6 of spade, 8 of heart, 8 of diamond, Queen of clover | Choice: 2 of clover, 2 of heart, 8 of heart, 8 of diamond,
+
+A of spade, 2 of diamond, 3 of diamond, 10 of heart, Jack of diamond, Jack of clover | Choice: 2 of diamond, 3 of diamond, Jack of diamond, Jack of clover |
+
+3 of clover, 4 of heart, 4 of spade, 5 of diamond, 9 of heart, Jack of clover | Choice: 3 of clover, 4 of heart, 4 of spade, 5 of diamond,
+
+6 of diamond, 6 of clover, 10 of heart, 10 of clover, King of diamond, King of clover | Choice: 6 of diamond, 6 of clover, 10 of heart, 10 of clover,
+
+3 of heart, 5 of clover, 6 of heart, 7 of diamond, 8 of spade, Queen of clover | Choice: 5 of clover, 6 of heart, 7 of diamond, 8 of spade,
+
+A of spade, 2 of clover, 3 of spade, 4 of diamond, 6 of clover, Queen of diamond | Choice: 2 of clover, 3 of spade, 4 of diamond, 6 of clover,
+
+3 of heart, 4 of heart, 9 of spade, 10 of diamond, Jack of heart, Jack of spade | Choice: 9 of spade, 10 of diamond, Jack of heart, Jack of spade |
+
+3 of spade, 4 of diamond, 5 of spade, 6 of heart, 8 of clover, 9 of diamond | Choice: 3 of spade, 4 of diamond, 5 of spade, 6 of heart,
+
+3 of diamond, 3 of heart, 5 of clover, 6 of diamond, 7 of spade, King of heart | Choice: 3 of diamond, 5 of clover, 6 of diamond, 7 of spade,
+
+2 of heart, 3 of clover, 4 of spade, 5 of diamond, 8 of clover, Queen of heart | Choice: 2 of heart, 3 of clover, 4 of spade, 5 of diamond,
+
+3 of spade, 5 of diamond, 8 of diamond, 9 of heart, 10 of clover, King of spade | Choice: 5 of diamond, 8 of diamond, 9 of heart, 10 of clover,
+
+A of spade, 2 of heart, 3 of diamond, Jack of clover, Jack of heart, Jack of diamond | Choice: A of spade, Jack of clover, Jack of heart, Jack of diamond |
+
+A of diamond, 3 of diamond, 5 of spade, Jack of clover, Jack of diamond, Queen of diamond | Choice: 5 of spade, Jack of clover, Jack of diamond, Queen of diamond |
+
+2 of clover, 5 of clover, 8 of heart, 9 of diamond, Jack of heart, King of spade | Choice: 2 of clover, 5 of clover, Jack of heart, King of spade |
+
+2 of heart, 3 of heart, 10 of clover, Jack of spade, King of clover, King of spade | Choice: 2 of heart, 3 of heart, King of clover, King of spade |
+
+A of diamond, 2 of spade, 2 of diamond, 3 of clover, 6 of spade, 9 of clover | Choice: A of diamond, 2 of spade, 2 of diamond, 3 of clover,
+
+2 of clover, 4 of heart, 9 of clover, 10 of diamond, Jack of clover, King of heart | Choice: 2 of clover, 9 of clover, 10 of diamond, Jack of clover,
+
+A of diamond, 3 of clover, 5 of spade, 7 of clover, Queen of heart, King of clover | Choice: 3 of clover, 5 of spade, 7 of clover, King of clover |
+
+A of heart, 2 of spade, 3 of diamond, 7 of diamond, 8 of clover, Jack of clover | Choice: A of heart, 2 of spade, 3 of diamond, Jack of clover |
+
+6 of heart, 9 of spade, 10 of heart, 10 of spade, Jack of spade, Queen of clover | Choice: 10 of heart, 10 of spade, Jack of spade, Queen of clover |

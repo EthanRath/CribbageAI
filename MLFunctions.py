@@ -75,6 +75,18 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
     crib = 1
     chooser1, chooser2 = hand
     player1, player2 = play
+
+    learning_rate = 5e-4
+    loss_fn = nn.MSELoss()
+    optc1 = torch.optim.SGD(chooser1.hand_model.parameters(), lr = learning_rate, momentum=.5)
+    optc2 = torch.optim.SGD(chooser2.hand_model.parameters(), lr = learning_rate, momentum=.5)
+    optr1 = torch.optim.SGD(chooser1.crib_model.parameters(), lr = learning_rate, momentum=.5)
+    optr2 = torch.optim.SGD(chooser2.crib_model.parameters(), lr = learning_rate, momentum=.5)
+    optpe1 = torch.optim.SGD(chooser1.play_model.parameters(), lr = learning_rate, momentum=.5)
+    optpe2 = torch.optim.SGD(chooser2.play_model.parameters(), lr = learning_rate, momentum=.5)
+
+    optp1 = torch.optim.SGD(player1.model.parameters(), lr = learning_rate, momentum=.5)
+    optp2 = torch.optim.SGD(player2.model.parameters(), lr = learning_rate, momentum=.5)
     
     avghand1 = np.zeros(batches)
     avghand2 = np.zeros(batches)
@@ -102,8 +114,8 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
                 print("Iteration: ", j)
             h1, h2, cut = g.FastDeal_Dual()
 
-            hand1, crib1 = chooser1.Choose(h1, crib, eps)
-            hand2, crib2 = chooser2.Choose(h2, crib*-1, eps)
+            hand1, crib1, score1 = chooser1.Choose(h1, crib, eps)
+            hand2, crib2, score2 = chooser2.Choose(h2, crib*-1, eps)
             handscore1 = g.ScoreHand(hand1, cut)
             handscore2 = g.ScoreHand(hand2, cut)
             
@@ -116,8 +128,12 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
         
             cribscore = g.ScoreHand(crib1 + crib2, cut, crib=True)
             
-            data_x_crib[crib == -1][cribind] = Encode([crib1])[0]
-            data_y_crib[crib == -1][cribind] = cribscore
+            if crib == -1:
+                data_x_crib[1][cribind] = Encode([crib2])[0]
+                data_y_crib[1][cribind] = cribscore
+            else:
+                data_x_crib[0][cribind] = Encode([crib1])[0]
+                data_y_crib[0][cribind] = cribscore
             cribind += j%2
             
             s1, s2 = SimPlayPhase(j, player1, player2, eps, hand1, hand2, g, crib, data_x_play[0], data_y_play[0], data_x_play[1], data_y_play[1], decay)
@@ -125,11 +141,17 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
             data_y_peg[0][j] = s1
             data_y_peg[1][j] = s2
             crib = crib*-1
+        print([score.item() for score in score1])
+        print([score.item() for score in score2])
+
+        #print(data_x_crib)
+        #print([data_y_crib[k].T for k in range(2)])
+
         print("Training Hand Choosers")
         train_hand1 = DataLoader(Dataset_Custom(data_x[0], data_y[0]), batch_size = batchsize)
-        train_loop(train_hand1, chooser1.hand_model, loss_fn, optimizer)
+        train_loop(train_hand1, chooser1.hand_model, loss_fn, optc1)
         train_hand2 = DataLoader(Dataset_Custom(data_x[1], data_y[1]), batch_size = batchsize)
-        train_loop(train_hand2, chooser2.hand_model, loss_fn, optimizer)
+        train_loop(train_hand2, chooser2.hand_model, loss_fn, optc2)
         avghand1[i] = np.mean(data_y[0])
         avghand2[i] = np.mean(data_y[1])
         print("Average Hand 1 Score Batch " + str(i) + ": " + str(avghand1[i]))
@@ -137,9 +159,9 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
         
         print("Training Crib Choosers")
         train_crib1 = DataLoader(Dataset_Custom(data_x_crib[0], data_y_crib[0]), batch_size = batchsize)
-        train_loop(train_crib1, chooser1.crib_model, loss_fn, optimizer)
+        train_loop(train_crib1, chooser1.crib_model, loss_fn, optr1)
         train_crib2 = DataLoader(Dataset_Custom(data_x_crib[1], data_y_crib[1]), batch_size = batchsize) 
-        train_loop(train_crib2, chooser2.crib_model, loss_fn, optimizer)
+        train_loop(train_crib2, chooser2.crib_model, loss_fn, optr2)
         avgcrib1[i] = np.mean(data_y_crib[0])
         avgcrib2[i] = np.mean(data_y_crib[1])
         print("Average Crib 1 Score Batch " + str(i) + ": " + str(avgcrib1[i]))
@@ -147,9 +169,9 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
         
         print("Training Players")
         train_play1 = DataLoader(Dataset_Custom(data_x_play[0], data_y_play[0]), batch_size = batchsize) 
-        train_loop(train_play1, player1.model, loss_fn, optimizer)
+        train_loop(train_play1, player1.model, loss_fn, optp1)
         train_play2 = DataLoader(Dataset_Custom(data_x_play[1], data_y_play[1]), batch_size = batchsize) 
-        train_loop(train_play2, player2.model, loss_fn, optimizer)
+        train_loop(train_play2, player2.model, loss_fn, optp2)
         avgplay1[i] = np.mean(data_y_play[0])
         avgplay2[i] = np.mean(data_y_play[1])
         print("Average Play 1 Score Batch " + str(i) + ": " + str(avgplay1[i]))
@@ -157,9 +179,9 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
         
         print("Training Play Choosers")
         train_peg1 = DataLoader(Dataset_Custom(data_x_peg[0], data_y_peg[0]), batch_size = batchsize) 
-        train_loop(train_peg1, chooser1.play_model, loss_fn, optimizer)
+        train_loop(train_peg1, chooser1.play_model, loss_fn, optpe1)
         train_peg2 = DataLoader(Dataset_Custom(data_x_peg[1], data_y_peg[1]), batch_size = batchsize) 
-        train_loop(train_peg2, chooser2.play_model, loss_fn, optimizer)
+        train_loop(train_peg2, chooser2.play_model, loss_fn, optpe2)
         avgpeg1[i] = np.mean(data_y_peg[0])
         avgpeg2[i] = np.mean(data_y_peg[1])
         print("Average Peg 1 Score Batch " + str(i) + ": " + str(avgpeg1[i]))
@@ -167,25 +189,25 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
         
     x = np.arange(0,batches, 1)
     
-    plt.figure(dpi = 500)
+    plt.figure(dpi = 250)
     plt.plot(x, avghand1)
     plt.plot(x, avghand2)
     plt.title("Avg hand score over batches")
     plt.show()
     
-    plt.figure(dpi = 500)
+    plt.figure(dpi = 250)
     plt.plot(x, avgcrib1)
     plt.plot(x, avgcrib2)
     plt.title("Avg crib score over batches")
     plt.show()
     
-    plt.figure(dpi = 500)
+    plt.figure(dpi = 250)
     plt.plot(x, avgplay1)
     plt.plot(x, avgplay2)
     plt.title("Avg play score over batches")
     plt.show()
     
-    plt.figure(dpi = 500)
+    plt.figure(dpi = 250)
     plt.plot(x, avgpeg1)
     plt.plot(x, avgpeg2)
     plt.title("Avg peg score over batches")
@@ -325,15 +347,16 @@ def Run_Adv_Training():
     peg2 = NeuralNetwork([[20, 256], [256, 256], [256, 128], [128, 1]], True).to(device).double()
     play2 = NeuralNetwork([[6*12, 256], [256, 256], [256, 128], [128, 1]], True).to(device).double()
 
-    choose1 = HandChooser(chooser1, crib1, peg1, 1, .15, .05)
-    choose2 = HandChooser(chooser2, crib2, peg2, 1, .15, .05)
+    choose1 = HandChooser(chooser1, crib1, peg1, 1, .1, .025)
+    choose2 = HandChooser(chooser2, crib2, peg2, 1, .1, .025)
     
     player1 = AI_Player(play1)
     player2 = AI_Player(play2)
     
     learning_rate = 1e-3
     loss_fn = nn.MSELoss()
-    optimizer = torch.optim.Adam(chooser1.parameters(), lr = learning_rate)
+    #optimizer = [torch.optim.Adam(chooser1.parameters(), lr = learning_rate)]
+    optimizer = "ADAM"
     AdversarialTraining([choose1, choose2], [player1, player2], loss_fn, optimizer, 100, 100)
     
 
@@ -389,5 +412,5 @@ def Load_And_Sim():
 
 
 if __name__ == "__main__":
-    Load_And_Sim()
-    #Run_Adv_Training()
+    #Load_And_Sim()
+    Run_Adv_Training()

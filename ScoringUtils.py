@@ -1,6 +1,6 @@
 import numpy as np
 import copy
-from Cribbage import Card
+#from Cribbage import Card
 
 
 def PlayRun(playstack):
@@ -33,9 +33,9 @@ def PlayPairs(playstack):
         score = pair_scores[mult-1]
     return score
 
-if __name__ == "__main__":
-    teststack = [Card('heart',4,4), Card('spade', 2, 2), Card('diamond', 2,2), 0, 0, 0, 0, 0, 3, 3, 0]
-    print(PlayPairs(teststack))
-    print("Break")
-    teststack = [Card('heart',5,5), Card('spade', 4, 4), Card('diamond', 3,3), Card("diamond", 2, 2), 0, 0, 0, 0, 3, 4, 1]
-    print(PlayRun(teststack))
+#if __name__ == "__main__":
+#    teststack = [Card('heart',4,4), Card('spade', 2, 2), Card('diamond', 2,2), 0, 0, 0, 0, 0, 3, 3, 0]
+#    print(PlayPairs(teststack))
+#    print("Break")
+#    teststack = [Card('heart',5,5), Card('spade', 4, 4), Card('diamond', 3,3), Card("diamond", 2, 2), 0, 0, 0, 0, 3, 4, 1]
+#    print(PlayRun(teststack))

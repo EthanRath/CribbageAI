@@ -76,7 +76,7 @@ class HandChooser:
             if i!=0 and (i+o2)%6 == 0:
                 o1 += 1
                 o2 += o1+1
-            sub = [0]*6
+            sub = [0 for iterator in range(6)]
             sub[o1] = 1
             sub[(i+o2)%6] = 1
             for j in range(len(sub)):
@@ -90,22 +90,22 @@ class HandChooser:
             crib_e = torch.Tensor(Encode([crib_t])).to(self.device).double()
             temp = (self.hand_bias * float(self.hand_model(hand_e)) +
                     (self.crib_bias * float(self.crib_model(crib_e)) * crib)
-                    + (self.hand_bias * self.hand_model(hand_e))) #score for this choice of hand
+                    + (self.play_bias * self.play_model(hand_e))) #score for this choice of hand
             scores[i] = temp
             subs[i] = sub
             if max_val == None or max_val < temp:
                 max_choice = sub
                 max_val = temp
-        if random.random() > eps:
+        if random.random() < eps:
             max_choice = subs[random.randint(0, 14)]
 
         res = [[],[]]
         for i in range(len(hand)):
-            if sub[i] == 0:
+            if max_choice[i] == 0:
                 res[0].append(hand[i])
             else:
                 res[1].append(hand[i])
-        return res[0], res[1]
+        return res[0], res[1], scores
 
 class AI_Player:
     def __init__(self, model, device = 'cuda'):

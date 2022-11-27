@@ -70,13 +70,13 @@ def Optimize(train_dataloader, test_dataloader, model, loss_fn, optimizer, epoch
         test_loop(test_dataloader, model, loss_fn)
     print("Done!")
 
-def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batches = 1000, eps = .1, decay = .1):
+def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batches = 1000, eps = .9, decay = .1):
     g = Game()
     crib = 1
     chooser1, chooser2 = hand
     player1, player2 = play
 
-    learning_rate = 5e-4
+    learning_rate = 1e-3
     loss_fn = nn.MSELoss()
     optc1 = torch.optim.SGD(chooser1.hand_model.parameters(), lr = learning_rate, momentum=.5)
     optc2 = torch.optim.SGD(chooser2.hand_model.parameters(), lr = learning_rate, momentum=.5)
@@ -143,6 +143,9 @@ def AdversarialTraining(hand, play, loss_fn, optimizer, batchsize = 1000, batche
             crib = crib*-1
         print([score.item() for score in score1])
         print([score.item() for score in score2])
+
+        if i != 0 and i%(batches//8) == 0:
+            eps /= 2
 
         #print(data_x_crib)
         #print([data_y_crib[k].T for k in range(2)])
@@ -347,8 +350,8 @@ def Run_Adv_Training():
     peg2 = NeuralNetwork([[20, 256], [256, 256], [256, 128], [128, 1]], True).to(device).double()
     play2 = NeuralNetwork([[6*12, 256], [256, 256], [256, 128], [128, 1]], True).to(device).double()
 
-    choose1 = HandChooser(chooser1, crib1, peg1, 1, .1, .025)
-    choose2 = HandChooser(chooser2, crib2, peg2, 1, .1, .025)
+    choose1 = HandChooser(chooser1, crib1, peg1, 1, 0, 0)
+    choose2 = HandChooser(chooser2, crib2, peg2, 1, 0, 0)
     
     player1 = AI_Player(play1)
     player2 = AI_Player(play2)
@@ -357,7 +360,7 @@ def Run_Adv_Training():
     loss_fn = nn.MSELoss()
     #optimizer = [torch.optim.Adam(chooser1.parameters(), lr = learning_rate)]
     optimizer = "ADAM"
-    AdversarialTraining([choose1, choose2], [player1, player2], loss_fn, optimizer, 100, 100)
+    AdversarialTraining([choose1, choose2], [player1, player2], loss_fn, optimizer, 1000, 100)
     
 
     choose1.save("Saves/C1")
@@ -376,8 +379,8 @@ def Load_And_Sim():
     peg2 = NeuralNetwork([[20, 256], [256, 256], [256, 128], [128, 1]], True).to(device).double()
     play2 = NeuralNetwork([[6*12, 256], [256, 256], [256, 128], [128, 1]], True).to(device).double()
 
-    choose1 = HandChooser(chooser1, crib1, peg1, 1, .15, .05)
-    choose2 = HandChooser(chooser2, crib2, peg2, 1, .15, .05)
+    choose1 = HandChooser(chooser1, crib1, peg1, 1, 0, 0)
+    choose2 = HandChooser(chooser2, crib2, peg2, 1, 0, 0)
     
     player1 = AI_Player(play1)
     player2 = AI_Player(play2)
@@ -397,8 +400,8 @@ def Load_And_Sim():
     crib = 1
     for i in range(2):
         h1, h2, cut = g.FastDeal_Dual()
-        hand1, crib1 = choose1.Choose(h1, crib, 0)
-        hand2, crib2 = choose2.Choose(h2, crib*-1, 0)
+        hand1, crib1, s1 = choose1.Choose(h1, crib, 0)
+        hand2, crib2, s2 = choose2.Choose(h2, crib*-1, 0)
         
         print("Player 1 delt: ", [str(c) for c in h1])
         print("Player 1 Chose: ", [str(c) for c in hand1])
@@ -412,5 +415,5 @@ def Load_And_Sim():
 
 
 if __name__ == "__main__":
-    #Load_And_Sim()
-    Run_Adv_Training()
+    Load_And_Sim()
+    #Run_Adv_Training()
